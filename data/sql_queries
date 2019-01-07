@@ -1,0 +1,16 @@
+/* Использывалась локальная база данных MySQL на локальном сервере */ 
+/* ----------- Создание базы данных MySQL ----------- */
+CREATE DATABASE userlistdb;
+
+/* ----------- Создание таблицы ----------- */
+CREATE TABLE `usertbl` (
+`id` int(11) NOT NULL auto_increment,
+`full_name` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+`email` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+`age` varchar(16) collate utf8_unicode_ci NOT NULL default '',
+`phone` varchar(16) collate utf8_unicode_ci NOT NULL default '',
+`username` varchar(20) collate utf8_unicode_ci NOT NULL default '',
+`password` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+PRIMARY KEY  (`id`),
+UNIQUE KEY `username` (`username`)
+) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
